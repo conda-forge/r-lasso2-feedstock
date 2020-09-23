@@ -3,7 +3,7 @@ About r-lasso2
 
 Home: http://www.maths.uwa.edu.au/~berwin/software/lasso.html
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD-3-Clause
 
