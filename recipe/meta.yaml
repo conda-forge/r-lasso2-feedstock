@@ -15,7 +15,6 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-  skip: true  # [r_base == "4.0.0"]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -30,9 +29,9 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
   host:
-    - r-base
+    - r-base >= 4.0.0
   run:
-    - r-base
+    - r-base >= 4.0.0
     - {{ native }}gcc-libs         # [win]
 
 test:
@@ -44,7 +43,7 @@ about:
   home: http://www.maths.uwa.edu.au/~berwin/software/lasso.html
   license: GPL-2.0-or-later
   summary: Routines and documentation for solving regression problems while imposing an L1 constraint on the estimates, based on the algorithm of Osborne et al. (1998).
-  license_family: GPL3
+  license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
