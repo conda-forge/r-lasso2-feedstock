@@ -1,4 +1,4 @@
-{% set version = "1.2-21.1" %}
+{% set version = "1.2-22" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lasso2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lasso2/lasso2_{{ version }}.tar.gz
-  sha256: 87c8449cd436332566fba7dcf21f5f2b33cd6e0a5ee2e95d3c3888d58c15e95e
+  sha256: 5b2eb62a680592923b91393985e461b6ecd15a3929515b2e21a4a651a06c07d1
 
 build:
   merge_build_host: true  # [win]
   number: 0
-  skip: True  # [r_base == "3.6"]
+  skip: true  # [r_base == "3.6"]
   rpaths:
     - lib/R/lib/
     - lib/
